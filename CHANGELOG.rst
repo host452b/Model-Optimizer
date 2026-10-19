@@ -23,6 +23,7 @@ Changelog
 
 **Bug Fixes**
 
+- Fix GPTQ with ``fused: true`` failing with a CUDA illegal memory access, or a Triton pointer error, on a model that ``device_map="auto"`` spreads over several GPUs once calibration reaches a layer outside the current GPU.
 - Fix ONNX preprocessing with custom TensorRT plugin libraries on TensorRT 11.
 - Fix ``INT8_DEFAULT_CFG``, ``FP8_DEFAULT_CFG``, ``NVFP4_DEFAULT_CFG`` and the other presets and recipes that import ``configs/ptq/units/default_disabled_quantizers`` and enable ``*input_quantizer``: since 0.44 they also quantized ``nn.LayerNorm`` inputs, which adds quantization error to the residual stream of models built on ``nn.LayerNorm`` such as BERT-style encoders. Re-quantize affected models; a recipe that wants ``nn.LayerNorm`` quantizers must enable them after importing that unit.
 
