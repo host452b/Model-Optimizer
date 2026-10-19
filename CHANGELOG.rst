@@ -22,6 +22,7 @@ Changelog
 
 **Bug Fixes**
 
+- Fix the diffusers skip-softmax HF export to emit the schema TensorRT-LLM VisualGen loads (``threshold_scale_factor.coefficients`` and a scalar ``target_sparsity``). Re-export checkpoints that failed to load.
 - Fix PTQ of native Transformers FP8 experts to apply source weight scales during calibration and export. Re-quantize affected checkpoints from the original FP8 source.
 
 - Fix ONNX preprocessing with custom TensorRT plugin libraries on TensorRT 11.
