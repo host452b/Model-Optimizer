@@ -355,7 +355,7 @@ class TestDFlash2Forward:
         Guards the target/predecessor alignment: a misaligned selector objective still
         produces a finite decreasing loss, but its accuracy does not reach 1.
         """
-        # float32: bf16 matmuls are ~8x slower on CPU and this model is too small to need them
+        # float32: CPU bf16 matmuls are emulated (~8x slower); this tiny model does not need bf16
         model = get_tiny_llama(num_hidden_layers=4, dtype=torch.float32)
         mtsp.convert(model, [("dflash", _get_dflash2_config())])
         model.train()
@@ -367,12 +367,9 @@ class TestDFlash2Forward:
             optimizer.zero_grad()
             out.loss.backward()
             optimizer.step()
-            selector_acc = out["selector_metrics"]["selector_accuracy"].item()
-            if out.train_acc[0][0] > 0.9 and selector_acc > 0.9:
-                break  # both gates pass after ~22 steps; the rest of the 60 only matter on a slow run
 
         assert out.train_acc[0][0] > 0.9
-        assert selector_acc > 0.9
+        assert out["selector_metrics"]["selector_accuracy"].item() > 0.9
 
 
 class TestCandidateSelectorAlignment:
