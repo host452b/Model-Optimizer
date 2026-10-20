@@ -2,7 +2,7 @@
 <html lang="en" data-accent-color="green" data-content_root="./">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Index - Model Optimizer 0.0.1.dev1+g82869a7ee</title><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Index - Model Optimizer 0.0.1.dev1+g7d563edbc</title><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"auto");
   </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=e1a1ceaf" />
@@ -1038,6 +1038,8 @@ data-aria-dark="Switch to auto color mode">
       <li><a href="reference/generated/modelopt.torch.export.trtllm.layer_utils.html#modelopt.torch.export.trtllm.layer_utils.build_embedding_config">build_embedding_config() (in module modelopt.torch.export.trtllm.layer_utils)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.export.trtllm.layer_utils.html#modelopt.torch.export.trtllm.layer_utils.build_fused_linear_config">build_fused_linear_config() (in module modelopt.torch.export.trtllm.layer_utils)</a>
+</li>
+      <li><a href="reference/generated/modelopt.torch.export.quantized_weight_export.html#modelopt.torch.export.quantized_weight_export.build_hf_quantization_config">build_hf_quantization_config() (in module modelopt.torch.export.quantized_weight_export)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.export.trtllm.layer_utils.html#modelopt.torch.export.trtllm.layer_utils.build_layernorm_config">build_layernorm_config() (in module modelopt.torch.export.trtllm.layer_utils)</a>
 </li>
@@ -2333,10 +2335,10 @@ data-aria-dark="Switch to auto color mode">
 </li>
       <li><a href="reference/generated/modelopt.torch.nas.autonas.html#modelopt.torch.nas.autonas.EvolveSearcher">EvolveSearcher (class in modelopt.torch.nas.autonas)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="reference/generated/modelopt.torch.fastgen.utils.html#modelopt.torch.fastgen.utils.expand_like">expand_like() (in module modelopt.torch.fastgen.utils)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="reference/generated/modelopt.torch.speculative.eagle.utils.html#modelopt.torch.speculative.eagle.utils.expand_mask">expand_mask() (in module modelopt.torch.speculative.eagle.utils)</a>
 </li>
       <li><a href="reference/generated/modelopt.onnx.quantization.graph_indexing.html#modelopt.onnx.quantization.graph_indexing.expand_node_names_from_patterns">expand_node_names_from_patterns() (in module modelopt.onnx.quantization.graph_indexing)</a>
@@ -2455,6 +2457,8 @@ data-aria-dark="Switch to auto color mode">
       </ul></li>
       <li><a href="reference/generated/modelopt.torch.quantization.export_onnx.html#modelopt.torch.quantization.export_onnx.export_mxfp8">export_mxfp8() (in module modelopt.torch.quantization.export_onnx)</a>
 </li>
+      <li><a href="reference/generated/modelopt.torch.export.quantized_weight_export.html#modelopt.torch.export.quantized_weight_export.export_quantized_weight_tensors">export_quantized_weight_tensors() (in module modelopt.torch.export.quantized_weight_export)</a>
+</li>
       <li><a href="reference/generated/modelopt.torch.sparsity.weight_sparsity.mode.html#modelopt.torch.sparsity.weight_sparsity.mode.export_sparse">export_sparse() (in module modelopt.torch.sparsity.weight_sparsity.mode)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.sparsity.attention_sparsity.conversion.html#modelopt.torch.sparsity.attention_sparsity.conversion.export_sparse_attention_config">export_sparse_attention_config() (in module modelopt.torch.sparsity.attention_sparsity.conversion)</a>
@@ -2493,6 +2497,8 @@ data-aria-dark="Switch to auto color mode">
 </li>
       <li><a href="reference/generated/modelopt.torch.distill.config.html#modelopt.torch.distill.config.KDLossConfig.expose_minimal_state_dict">expose_minimal_state_dict (KDLossConfig attribute)</a>
 </li>
+      <li><a href="reference/generated/modelopt.torch.speculative.config.html#modelopt.torch.speculative.config.ExternalDraftConfig.external_ce_alpha">external_ce_alpha (ExternalDraftConfig attribute)</a>
+</li>
       <li><a href="reference/generated/modelopt.torch.speculative.config.html#modelopt.torch.speculative.config.ExternalDraftConfig.external_loss">external_loss (ExternalDraftConfig attribute)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.speculative.config.html#modelopt.torch.speculative.config.ExternalDraftConfig.external_report_acc">external_report_acc (ExternalDraftConfig attribute)</a>
@@ -2500,6 +2506,8 @@ data-aria-dark="Switch to auto color mode">
       <li><a href="reference/generated/modelopt.torch.speculative.config.html#modelopt.torch.speculative.config.ExternalDraftConfig.external_top_k">external_top_k (ExternalDraftConfig attribute)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.speculative.config.html#modelopt.torch.speculative.config.ExternalDraftConfig.external_top_p">external_top_p (ExternalDraftConfig attribute)</a>
+</li>
+      <li><a href="reference/generated/modelopt.torch.speculative.config.html#modelopt.torch.speculative.config.ExternalDraftConfig.external_tvd_alpha">external_tvd_alpha (ExternalDraftConfig attribute)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.speculative.config.html#modelopt.torch.speculative.config.ExternalDraftConfig">ExternalDraftConfig (class in modelopt.torch.speculative.config)</a>
 </li>
@@ -4652,6 +4660,8 @@ data-aria-dark="Switch to auto color mode">
       <li><a href="reference/generated/modelopt.torch.export.trtllm.model_config_utils.html#modelopt.torch.export.trtllm.model_config_utils.merge_qkv">merge_qkv() (in module modelopt.torch.export.trtllm.model_config_utils)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.quantization.lora.html#modelopt.torch.quantization.lora.merge_quant_lora">merge_quant_lora() (in module modelopt.torch.quantization.lora)</a>
+</li>
+      <li><a href="reference/generated/modelopt.torch.export.quantized_weight_export.html#modelopt.torch.export.quantized_weight_export.merge_quantized_weight_export_states">merge_quantized_weight_export_states() (in module modelopt.torch.export.quantized_weight_export)</a>
 </li>
       <li><a href="reference/generated/modelopt.onnx.quantization.autotune.html#modelopt.onnx.quantization.autotune.Region.metadata">metadata (Region attribute)</a>
 </li>
@@ -9884,8 +9894,6 @@ data-aria-dark="Switch to auto color mode">
 </li>
       <li><a href="reference/generated/modelopt.onnx.autocast.graphsanitizer.html#modelopt.onnx.autocast.graphsanitizer.GraphSanitizer.remove_disconnected_outputs">remove_disconnected_outputs() (GraphSanitizer method)</a>
 </li>
-      <li><a href="reference/generated/modelopt.onnx.quantization.qdq_graph.html#modelopt.onnx.quantization.qdq_graph.remove_dla_scalar_input_qdq">remove_dla_scalar_input_qdq() (in module modelopt.onnx.quantization.qdq_graph)</a>
-</li>
       <li><a href="reference/generated/modelopt.onnx.quantization.qdq_utils.html#modelopt.onnx.quantization.qdq_utils.remove_graph_input_q">remove_graph_input_q() (in module modelopt.onnx.quantization.qdq_utils)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.quantization.utils.html#modelopt.torch.quantization.utils.SharedQuantState.remove_hooks">remove_hooks() (SharedQuantState method)</a>
@@ -9901,6 +9909,8 @@ data-aria-dark="Switch to auto color mode">
       <li><a href="reference/generated/modelopt.onnx.quantization.graph_rewrites.html#modelopt.onnx.quantization.graph_rewrites.remove_redundant_cast_nodes">remove_redundant_cast_nodes() (in module modelopt.onnx.quantization.graph_rewrites)</a>
 </li>
       <li><a href="reference/generated/modelopt.onnx.utils.html#modelopt.onnx.utils.remove_redundant_casts">remove_redundant_casts() (in module modelopt.onnx.utils)</a>
+</li>
+      <li><a href="reference/generated/modelopt.onnx.quantization.qdq_graph.html#modelopt.onnx.quantization.qdq_graph.remove_scalar_input_qdq">remove_scalar_input_qdq() (in module modelopt.onnx.quantization.qdq_graph)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.opt.conversion.html#modelopt.torch.opt.conversion.ModeloptStateManager.remove_state">remove_state() (ModeloptStateManager class method)</a>
 </li>
@@ -9988,10 +9998,10 @@ data-aria-dark="Switch to auto color mode">
       </ul></li>
       <li><a href="reference/generated/modelopt.torch.quantization.nn.modules.tensor_quantizer.html#modelopt.torch.quantization.nn.modules.tensor_quantizer.TensorQuantizer.reset_amax">reset_amax() (TensorQuantizer method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="reference/generated/modelopt.torch.nas.patch.html#modelopt.torch.nas.patch.PatchManager.reset_before_sample">reset_before_sample() (PatchManager method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="reference/generated/modelopt.torch.quantization.nn.modules.tensor_quantizer.html#modelopt.torch.quantization.nn.modules.tensor_quantizer.TensorQuantizer.reset_bias">reset_bias() (TensorQuantizer method)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.nas.hparams.concat.html#modelopt.torch.nas.hparams.concat.ConcatTracedHp.reset_choices">reset_choices() (ConcatTracedHp method)</a>
@@ -10105,6 +10115,8 @@ data-aria-dark="Switch to auto color mode">
       <li><a href="reference/generated/modelopt.torch.export.trtllm.model_config_utils.html#modelopt.torch.export.trtllm.model_config_utils.restore_model_config">restore_model_config() (in module modelopt.torch.export.trtllm.model_config_utils)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.puzzletron.puzzletron_nas_plugin.html#modelopt.torch.puzzletron.puzzletron_nas_plugin.restore_puzzletron_model">restore_puzzletron_model() (in module modelopt.torch.puzzletron.puzzletron_nas_plugin)</a>
+</li>
+      <li><a href="reference/generated/modelopt.torch.export.quantized_weight_export.html#modelopt.torch.export.quantized_weight_export.restore_quantized_weight_export_state">restore_quantized_weight_export_state() (in module modelopt.torch.export.quantized_weight_export)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.nas.autonas.html#modelopt.torch.nas.autonas.restore_searchspace">restore_searchspace() (in module modelopt.torch.nas.autonas)</a>
 </li>
@@ -10430,6 +10442,8 @@ data-aria-dark="Switch to auto color mode">
         <li><a href="reference/generated/modelopt.torch.nas.utils.html#modelopt.torch.nas.utils.select">(in module modelopt.torch.nas.utils)</a>
 </li>
       </ul></li>
+      <li><a href="reference/generated/modelopt.torch.export.quantized_weight_export.html#modelopt.torch.export.quantized_weight_export.select_quantized_weight_export_state">select_quantized_weight_export_state() (in module modelopt.torch.export.quantized_weight_export)</a>
+</li>
       <li><a href="reference/generated/modelopt.torch.export.trtllm.model_config.html#modelopt.torch.export.trtllm.model_config.DecoderLayerConfig.self_attention">self_attention (DecoderLayerConfig attribute)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.export.trtllm.model_config.html#modelopt.torch.export.trtllm.model_config.DecoderLayerConfig.self_attention_layernorm">self_attention_layernorm (DecoderLayerConfig attribute)</a>
@@ -10625,6 +10639,8 @@ data-aria-dark="Switch to auto color mode">
       <li><a href="reference/generated/modelopt.torch.models.html#modelopt.torch.models.SpecSection">SpecSection (class in modelopt.torch.models)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.export.trtllm.model_config_utils.html#modelopt.torch.export.trtllm.model_config_utils.split_config_and_weights">split_config_and_weights() (in module modelopt.torch.export.trtllm.model_config_utils)</a>
+</li>
+      <li><a href="reference/generated/modelopt.torch.export.quantized_weight_export.html#modelopt.torch.export.quantized_weight_export.split_quantized_weight_export_state">split_quantized_weight_export_state() (in module modelopt.torch.export.quantized_weight_export)</a>
 </li>
       <li><a href="reference/generated/modelopt.torch.puzzletron.replacement_library.replacement_utils.html#modelopt.torch.puzzletron.replacement_library.replacement_utils.split_replacements_to_teacher_and_student">split_replacements_to_teacher_and_student() (in module modelopt.torch.puzzletron.replacement_library.replacement_utils)</a>
 </li>
