@@ -2,7 +2,7 @@
 <html lang="en" data-accent-color="green" data-content_root="../../">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>config - Model Optimizer 0.0.1.dev1+gcf2eff314</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="dflash" href="modelopt.torch.speculative.dflash.html" /><link rel="prev" title="speculative" href="modelopt.torch.speculative.html" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>config - Model Optimizer 0.0.1.dev1+gf884e2d2e</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="dflash" href="modelopt.torch.speculative.dflash.html" /><link rel="prev" title="speculative" href="modelopt.torch.speculative.html" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"auto");
   </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=e1a1ceaf" />
@@ -459,10 +459,12 @@ data-aria-dark="Switch to auto color mode">
 </ul>
 </li>
 <li><a class="reference internal" href="#modelopt.torch.speculative.config.ExternalDraftConfig"><code class="docutils literal notranslate"><span class="pre">ExternalDraftConfig</span></code></a><ul>
+<li><a class="reference internal" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_ce_alpha"><code class="docutils literal notranslate"><span class="pre">ExternalDraftConfig.external_ce_alpha</span></code></a></li>
 <li><a class="reference internal" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_loss"><code class="docutils literal notranslate"><span class="pre">ExternalDraftConfig.external_loss</span></code></a></li>
 <li><a class="reference internal" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_report_acc"><code class="docutils literal notranslate"><span class="pre">ExternalDraftConfig.external_report_acc</span></code></a></li>
 <li><a class="reference internal" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_top_k"><code class="docutils literal notranslate"><span class="pre">ExternalDraftConfig.external_top_k</span></code></a></li>
 <li><a class="reference internal" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_top_p"><code class="docutils literal notranslate"><span class="pre">ExternalDraftConfig.external_top_p</span></code></a></li>
+<li><a class="reference internal" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_tvd_alpha"><code class="docutils literal notranslate"><span class="pre">ExternalDraftConfig.external_tvd_alpha</span></code></a></li>
 <li><a class="reference internal" href="#modelopt.torch.speculative.config.ExternalDraftConfig.model_config"><code class="docutils literal notranslate"><span class="pre">ExternalDraftConfig.model_config</span></code></a></li>
 </ul>
 </li>
@@ -841,8 +843,13 @@ data-aria-dark="Switch to auto color mode">
 keeps its own embeddings and lm_head; the base model contributes only cached
 hidden states, projected by the base lm_head to obtain teacher logits.</p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="modelopt.torch.speculative.config.ExternalDraftConfig.external_ce_alpha">
+<span class="sig-name descname"><span class="pre">external_ce_alpha</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></span><a class="headerlink" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_ce_alpha" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="modelopt.torch.speculative.config.ExternalDraftConfig.external_loss">
-<span class="sig-name descname"><span class="pre">external_loss</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'soft_ce'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'tvd'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'tvd_deploy'</span></span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_loss" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">external_loss</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'soft_ce'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'tvd'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'tvd_deploy'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'tvd_ce'</span></span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_loss" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -858,6 +865,11 @@ hidden states, projected by the base lm_head to obtain teacher logits.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="modelopt.torch.speculative.config.ExternalDraftConfig.external_top_p">
 <span class="sig-name descname"><span class="pre">external_top_p</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></span><a class="headerlink" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_top_p" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="modelopt.torch.speculative.config.ExternalDraftConfig.external_tvd_alpha">
+<span class="sig-name descname"><span class="pre">external_tvd_alpha</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></span><a class="headerlink" href="#modelopt.torch.speculative.config.ExternalDraftConfig.external_tvd_alpha" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
